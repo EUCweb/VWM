@@ -1,0 +1,119 @@
+﻿<Window x:Name="VWM" x:Class="VWM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="VDI Workplace Manager" Height="839.775" Width="943.668" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        <Window.TaskbarItemInfo>
+    <TaskbarItemInfo />
+  </Window.TaskbarItemInfo>
+    <Grid>
+
+        <TabControl HorizontalAlignment="Left" Height="395" VerticalAlignment="Top" Width="936">
+            <TabItem x:Name="TI1General" Header="General Information" >
+                <Grid>
+
+                    <Label x:Name="LBL10G" Content="DTAP Street" HorizontalAlignment="Left" Margin="93,20,0,0" VerticalAlignment="Top" Width="566" Height="26" FontWeight="Bold"/>
+                    <Label x:Name="LBL11G" Content="For the VDI Enviroment we have a complete DTAP Street available. DTAP Stands for (D)evelopment, (T)est, (A)ceptance, (P)roduction." HorizontalAlignment="Left" Margin="93,40,0,0" VerticalAlignment="Top" Width="783" Height="26"/>
+
+                    <Label x:Name="LBL20G" Content="(P)roduction - Non-Persistent: " HorizontalAlignment="Left" Margin="93,60,0,0" VerticalAlignment="Top" Width="783" Height="26" FontWeight="Bold"/>
+                    <Label x:Name="LBL21G" Content="The production environemnt with required Software and a roaming Windows Profile. This is a Non_persistent VDI Image, that doesn't allow the installation &#xA;of any application. Standarized Image for all Users !!" HorizontalAlignment="Left" Margin="100,75,0,0" VerticalAlignment="Top" Width="783" Height="45" />
+
+                    <Label x:Name="LBL30G" Content="(A)cceptance - Non-Persistent: " HorizontalAlignment="Left" Margin="93,120,0,0" VerticalAlignment="Top" Width="783" Height="26" FontWeight="Bold"/>
+                    <Label x:Name="LBL31G" Content="User Acceptance Test is necassary to test new Appications, Windows and App Updates before comes into production. Acceptance uses the same Windows Profile and Workspace Drive E: as in Production &#xA;If the User is enabled  for the Acceptance Envioenemnt, he used the Citrix Production published Desktop but switched to the Acceptance Desktop." HorizontalAlignment="Left" Margin="100,135,0,0" VerticalAlignment="Top" Width="783" Height="45" />
+
+                    <Label x:Name="LBL40G" Content="(T)est - Non-Persistent: " HorizontalAlignment="Left" Margin="93,180,0,0" VerticalAlignment="Top" Width="783" Height="26" FontWeight="Bold"/>
+                    <Label x:Name="LBL41G" Content="Fresh new Applications or Windows Images without affectiong the Acceptance/Production environment can be used it. seperated Windows profile and Workspace Drive E: is used &#xA; If your enabled for the Test Environment you can use the VDI Workplace Manager to manage your Test environment." HorizontalAlignment="Left" Margin="100,195,0,0" VerticalAlignment="Top" Width="783" Height="45" />
+
+
+                    <Label x:Name="LBL50G" Content="(D)evelop - Persistent: " HorizontalAlignment="Left" Margin="93,240,0,0" VerticalAlignment="Top" Width="783" Height="26" FontWeight="Bold"/>
+                    <Label x:Name="LBL51G" Content="Evaluate new Applications before it will be packaged and come to Test, Acceptance, Productionn. Seperated Windows profile and Workspace Drive E: is used &#xA; If your enabled for the Develop Environment you can use the VDI Workplace Manager to manage your Dev environment." HorizontalAlignment="Left" Margin="100,255,0,0" VerticalAlignment="Top" Width="783" Height="45" />
+
+                </Grid>
+            </TabItem>
+
+
+
+            <TabItem x:Name="TI1T" Header="(T)est Environment">
+                <Grid Background="#FFE5E5E5">
+
+                    <RadioButton x:Name="RB1T" Content="Clone Workspace" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" FontWeight="Bold" Margin="72,10,0,0" Height="15" Grid.ColumnSpan="2"/>
+                    <Label x:Name="LBL1T" Content="Clones your complete Workspace E: from Proction to Test. If you have any Data on the E: drive in the Test Environment available, &#xA;this data will be lost !!" Margin="93,20,8,0" VerticalAlignment="Top" Height="40" Grid.ColumnSpan="2"/>
+
+                    <RadioButton x:Name="RB2T" Content="Empty Workspace" HorizontalAlignment="Left" Width="400" Margin="72,65,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <Label x:Name="LBL2T" Content="Creates a new empty Workspace Drive E:. If you have any Data on the E: drive in the Test Environment available, &#xA;this data will be lost !! " HorizontalAlignment="Left" Margin="93,75,0,0" VerticalAlignment="Top" Width="689.937" Grid.ColumnSpan="2"/>
+
+                    <RadioButton x:Name="RB3T" Content="Clone your roaming Windows Profile" HorizontalAlignment="Left" Margin="72,120,0,0" VerticalAlignment="Top" Width="400" FontWeight="Bold" Height="15" Grid.ColumnSpan="2"/>
+                    <Label x:Name="LBL3T" Content="Clones your Windows roaming Profile from Production to Test environment. &#xA;If you currently logged in at the Test environment, your are automatically logged of and the the process starts &#xA;This action does not affect any Data on your Workspace Drive E:" HorizontalAlignment="Left" Margin="93,130,0,0" VerticalAlignment="Top" Width="704" Height="61" Grid.ColumnSpan="2"/>
+
+                    <RadioButton x:Name="RB4T" Content="Reset your roaming Windows Profile" HorizontalAlignment="Left" Margin="72,190,0,0" VerticalAlignment="Top" Width="400" FontWeight="Bold" Height="15" Grid.ColumnSpan="2"/>
+                    <Label x:Name="LBL4T" Content="Reset your local Windows Profile. If you curently logged in on the VDI001-TEST VM, you are automatically logged off and the process starts. &#xA;This action does not affect any Data on your Workspace Drive E:" HorizontalAlignment="Left" Margin="93,200,0,0" VerticalAlignment="Top" Width="778" Height="53" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" Grid.ColumnSpan="2"/>
+
+
+                    <Button x:Name="BTExT" Content="Execute Action in (T)est Environment" Margin="300,300,0,0" VerticalAlignment="Top" Height="38" HorizontalAlignment="Left" Width="300"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TI1D" Header="(D)evelop Environment">
+                <Grid Background="#FFE5E5E5">
+
+                    <RadioButton x:Name="RB1D" Content="Re-Install VDI" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" FontWeight="Bold" Margin="72,10,0,0" Height="15"/>
+                    <Label x:Name="LBL1D" Content="If you have a persistent VDI assigned you can easily install this VM from scratch. This Process takes 5 up 6 hours.&#xA;This action does not affect any Data on your Workspace Drive E:" HorizontalAlignment="Left" Margin="93,20,0,0" VerticalAlignment="Top"/>
+
+                    <RadioButton x:Name="RB2D" Content="Reset local Windows Profile" HorizontalAlignment="Left" Margin="72,65,0,0" VerticalAlignment="Top" Width="400" FontWeight="Bold" Height="15"/>
+                    <Label x:Name="LBL2D" Content="Reset your local Windows Profile. If you curently logged in on VDI002-DEV VM, you are auttomatically logged off and the process starts. &#xA;This action does not affect any Data on your Workspace Drive E:" HorizontalAlignment="Left" Margin="97,75,0,0" VerticalAlignment="Top" Width="778" Height="53" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"/>
+
+                    <RadioButton x:Name="RB3D" Content="Enable nested Virtualization" HorizontalAlignment="Left" Margin="72,120,0,0" VerticalAlignment="Top" Width="400" FontWeight="Bold" Height="15"/>
+                    <Label x:Name="LBL43" Content="To install Docker inside the virtual machine, nested Virtualization must be enabled for this VM. &#xA; Support Notes: Life Migration on Host-level will be disabled with nested virtualization" HorizontalAlignment="Left" Margin="97,130,0,0" VerticalAlignment="Top" Width="778" Height="53" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"/>
+
+                    <RadioButton x:Name="RB4D" Content="Force Reboot" HorizontalAlignment="Left" Margin="72,175,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="400" Width="94"/>
+                    <Label x:Name="LBL4D" Content="Performs are Hard Power cycle if the VM hangs or does not respond" HorizontalAlignment="Left" Margin="97,185,0,0" VerticalAlignment="Top" Width="566" Height="26"/>
+
+
+                    <Button x:Name="BTExD" Content="Execute Action in (D)evelop Environment" Margin="300,300,0,0" VerticalAlignment="Top" Height="38" HorizontalAlignment="Left" Width="300"/>
+
+
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="TI1VDADM" Header="VD-ADMIN">
+                <Grid Background="#FFE5E5E5">
+                </Grid>
+            </TabItem>
+			
+			<TabItem x:Name="TI1VAADM" Header="VA-ADMIN">
+            <Grid Background="#FFE5E5E5">
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+
+        <StatusBarItem x:Name="StsBarItem" HorizontalAlignment="Center" Margin="10,774,10,0" VerticalAlignment="Top" Width="927.668" Height="26.775"/>
+        <DataGrid x:Name="dgUser" HorizontalAlignment="Left" Height="369" Margin="1,400,0,0" VerticalAlignment="Top" Width="922.668" ItemsSource="{Binding}" GridLinesVisibility="Horizontal">
+            <DataGrid.Columns>
+                
+			
+				<DataGridHyperlinkColumn Header="Job-ID" Binding="{Binding C1}" ContentBinding="{Binding C0}" />
+					
+              
+                <DataGridTemplateColumn Header="Status" IsReadOnly="True" MinWidth="40">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding C2}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                 </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Date" IsReadOnly="True" Binding="{Binding C3}" MinWidth="60" SortDirection="Descending" />
+                <DataGridTextColumn Header="Time" IsReadOnly="True" Binding="{Binding C4}" MinWidth="60" />
+                <DataGridTextColumn Header="User" IsReadOnly="True"  Binding="{Binding C5}" MinWidth="100" />
+                <DataGridTextColumn Header="Environment" IsReadOnly="True"  Binding="{Binding C6}" MinWidth="80" />
+                <DataGridTextColumn Header="Virtual Machine" IsReadOnly="True" Binding="{Binding C7}" MinWidth="110" />
+                <DataGridTextColumn Header="Action" IsReadOnly="True"  Binding="{Binding C8}" MinWidth="100" />
+				<DataGridTextColumn Header="Remark" IsReadOnly="True"  Binding="{Binding C9}" MinWidth="230" />
+                </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
