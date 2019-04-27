@@ -1,0 +1,39 @@
+{
+   "VD": [{
+				Prefix: "VDW",
+				Dgroup:  "AR-CTX-VDI002-DEV",
+				Tgroup:  "AR-CTX-VDI001-TEST",
+				Agroup:  "AR-CTX-Switch-VDI",
+				Pgroup:  "AR-CTX-VDI001",
+				DModel: "persistent",
+				TModel: "Non-persistent",
+				AModel: "Non-persistent",
+				PModel: "Non-persistent",
+				DpubName: "Citrix Win10 VDI002 DEV",
+				admin:  "ADR-SERV-VDI"
+		}], 
+		
+	"VA": [{
+				PreFix: "VAW",
+				Dgroup:  "",
+				Tgroup:  "",
+				Agroup:  "",
+				Pgroup:  "",
+				DModel: "",
+				TModel: "",
+				AModel: "",
+				PModel: "",
+				DpubName: "",
+				admin:  "ADR-SERV-VDI"
+		}],	
+		
+	
+	
+	"Global": [{
+		"AutoRefreshTime": "3",
+		"Server": "APW041SC1001",
+		"Path": "Invoke-ctxdevice-Files$",
+		"req": "request",
+		"proc": "processed"
+	}]
+}
