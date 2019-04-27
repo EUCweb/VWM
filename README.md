@@ -1,5 +1,4 @@
-# VWM
-VDI Workplace Manager
+# VWM - VDI Workplace Manager 
 
 The User can manage the VDI Enviroenmt from their own, without stump the servicedesk.
 A nice GUI will gave them the functionalities there are need, based on AD Group membership the Tabs the Tabs are enabled or not.
