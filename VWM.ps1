@@ -376,7 +376,7 @@ $wpf.dgUser.add_SelectedCellsChanged( {
                 Invoke-Item $logPath
             }
             else {
-                #Hopefully sensible error
+                #Hopefully sensible error message
                 Write-Error "Log file at $logPath could not be found in the same directory as the related JSON file."
             }
             
