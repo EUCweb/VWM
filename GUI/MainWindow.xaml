@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="VDI Workplace Manager" Height="839.775" Width="943.668" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-        <Window.TaskbarItemInfo>
-    <TaskbarItemInfo />
-  </Window.TaskbarItemInfo>
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo />
+    </Window.TaskbarItemInfo>
     <Grid>
 
         <TabControl HorizontalAlignment="Left" Height="395" VerticalAlignment="Top" Width="936">
@@ -81,9 +81,9 @@
                 <Grid Background="#FFE5E5E5">
                 </Grid>
             </TabItem>
-			
-			<TabItem x:Name="TI1VAADM" Header="VA-ADMIN">
-            <Grid Background="#FFE5E5E5">
+
+            <TabItem x:Name="TI1VAADM" Header="VA-ADMIN">
+                <Grid Background="#FFE5E5E5">
                 </Grid>
             </TabItem>
 
@@ -91,29 +91,30 @@
         </TabControl>
 
         <StatusBarItem x:Name="StsBarItem" HorizontalAlignment="Center" Margin="10,774,10,0" VerticalAlignment="Top" Width="927.668" Height="26.775"/>
-        <DataGrid x:Name="dgUser" HorizontalAlignment="Left" Height="369" Margin="1,400,0,0" VerticalAlignment="Top" Width="922.668" ItemsSource="{Binding}" GridLinesVisibility="Horizontal">
+        <DataGrid x:Name="dgUser" HorizontalAlignment="Left" Height="369" Margin="1,400,0,0" VerticalAlignment="Top" Width="922.668" ItemsSource="{Binding}" GridLinesVisibility="Horizontal" SelectionUnit="Cell" SelectionMode="Single">
             <DataGrid.Columns>
-                
-			
-				<DataGridHyperlinkColumn Header="Job-ID" Binding="{Binding C1}" ContentBinding="{Binding C0}" />
-					
-              
+
+
+                <DataGridHyperlinkColumn Header="Job-ID" Binding="{Binding C1}" ContentBinding="{Binding C0}" />
+
+
                 <DataGridTemplateColumn Header="Status" IsReadOnly="True" MinWidth="40">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Source="{Binding C2}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                 </DataGridTemplateColumn>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Date" IsReadOnly="True" Binding="{Binding C3}" MinWidth="60" SortDirection="Descending" />
                 <DataGridTextColumn Header="Time" IsReadOnly="True" Binding="{Binding C4}" MinWidth="60" />
                 <DataGridTextColumn Header="User" IsReadOnly="True"  Binding="{Binding C5}" MinWidth="100" />
                 <DataGridTextColumn Header="Environment" IsReadOnly="True"  Binding="{Binding C6}" MinWidth="80" />
                 <DataGridTextColumn Header="Virtual Machine" IsReadOnly="True" Binding="{Binding C7}" MinWidth="110" />
                 <DataGridTextColumn Header="Action" IsReadOnly="True"  Binding="{Binding C8}" MinWidth="100" />
-				<DataGridTextColumn Header="Remark" IsReadOnly="True"  Binding="{Binding C9}" MinWidth="230" />
-                </DataGrid.Columns>
+                <DataGridTextColumn Header="Remark" IsReadOnly="True"  Binding="{Binding C9}" MinWidth="230" />
+            </DataGrid.Columns>
         </DataGrid>
 
     </Grid>
 </Window>
+    
