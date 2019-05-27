@@ -369,6 +369,7 @@ $wpf.dgUser.add_SelectedCellsChanged( {
             $jsonPath = Split-Path $jsonPath -Parent
             #change json filename to log, will break if there is a second 'job' in json name and join it to path
             #Path assumes log file is in same directory as the json file
+            # If you are scared of job appearing twice in the json filename, we could change it to -replace and use regex
             $logPath = Join-Path $jsonPath $JsonFileName.Replace('Job', 'VWM').Replace('.json', '.log')
             #Test for file
             if (Test-Path $logPath) {
