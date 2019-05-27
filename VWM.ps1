@@ -110,10 +110,12 @@ function Submit-VWMRequest {
 }
 
 # Hide Powershell Console and show Gui only
+#Jim - did not hide console to debug
 #Hide-Console
 
 
 #read config file
+#Jim maybe better format for this command
 $cfg = Get-Content $cfgfile | Convertfrom-Json
 
 #set global Values
@@ -246,6 +248,7 @@ $timer1.Enabled = $True
 
 $GetData = {
     $wpf.dgUser.Items.Clear()
+    #Jim moved $files variable to script scope
     $Script:Files = (Get-ChildItem -Filter *.json -Recurse -Path "$procPath\$userID").FullName
    
     ForEach ($File in $Files) {
@@ -353,19 +356,27 @@ $wpf.RB4T.add_Checked( {
 
 
 #region DataGrid Selection
-
+#Jim added data grid event watch
 $wpf.dgUser.add_SelectedCellsChanged( {
+    #Check if click is in job-ID column
         if ($_.addedcells.column.Header -eq 'Job-ID') {
+            #Grab cell content, depends on the C0 name you have given this column above, will stop working if you cnage that
             $cellContent = $wpf.dgUser.SelectedCells.Item(0).item.C0
+            #grab the matching json file path from files that matches the job ID, doing it this way so I son't have to go back to the file system again as this may be costly
             $jsonPath = $Script:files -match $cellContent
+            # Get path and filename from the json file we matched
             $JsonFileName = Split-Path $jsonPath -leaf
             $jsonPath = Split-Path $jsonPath -Parent
-            $logPath = Join-Path $jsonPath $JsonFileName.Replace('Job', 'VWM').Replace('json', 'log')
+            #change json filename to log, will break if there is a second 'job' in json name and join it to path
+            #Path assumes log file is in same directory as the json file
+            $logPath = Join-Path $jsonPath $JsonFileName.Replace('Job', 'VWM').Replace('.json', '.log')
+            #Test for file
             if (Test-Path $logPath) {
                 #Opens log with OS default editor
                 Invoke-Item $logPath
             }
             else {
+                #Hopefully sensible error message
                 Write-Error "Log file at $logPath could not be found in the same directory as the related JSON file."
             }
             
