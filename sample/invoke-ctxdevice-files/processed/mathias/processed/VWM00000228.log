@@ -1,0 +1,81 @@
+15.05.2019 10:00:20 | matthias | INFORMATION... | Cleaning Logfile (VWM*) in E:\appservices\invoke-ctxdevice\Files\processed\matthias and keep the last 20 Logs
+15.05.2019 10:00:20 | matthias | INFORMATION... | Cleaning Logfile (job*) in E:\appservices\invoke-ctxdevice\Files\processed\matthias and keep the last 20 Logs
+15.05.2019 10:00:20 | matthias | INFORMATION... | Processing file E:\appservices\invoke-ctxdevice\Files\request\matthias_20190515-100018.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | User: matthias
+15.05.2019 10:00:20 | matthias | INFORMATION... | VM: VDW041VD79003
+15.05.2019 10:00:20 | matthias | INFORMATION... | Action: ReInstall_Finished
+15.05.2019 10:00:20 | matthias | INFORMATION... | PreFix: 
+15.05.2019 10:00:20 | matthias | INFORMATION... | Model: 
+15.05.2019 10:00:20 | matthias | INFORMATION... | DesktopGroupName: 
+15.05.2019 10:00:20 | matthias | INFORMATION... | Environemnt: 
+15.05.2019 10:00:20 | matthias | INFORMATION... | Move File from E:\appservices\invoke-ctxdevice\Files\request\matthias_20190515-100018.json to E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | split up VM name VDW041VD79003 in different components to trigger the action
+15.05.2019 10:00:20 | matthias | INFORMATION... | PreFix: VDW
+15.05.2019 10:00:20 | matthias | INFORMATION... | Locationx: 041
+15.05.2019 10:00:20 | matthias | INFORMATION... | ProductShortname: VD
+15.05.2019 10:00:20 | matthias | INFORMATION... | Version: 7
+15.05.2019 10:00:20 | matthias | INFORMATION... | DataCenter: 9
+15.05.2019 10:00:20 | matthias | INFORMATION... | DTAP identifier: 0
+15.05.2019 10:00:20 | matthias | INFORMATION... | DTAP Stage: DEV
+15.05.2019 10:00:20 | matthias | INFORMATION... | Model: persistent
+15.05.2019 10:00:20 | matthias | INFORMATION... | Read Global Config from E:\appservices\ntx-config\config\Global\Global.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | Read PreFix Config from E:\appservices\ntx-config\config\Global\VDW.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | Check Config-Files in Folder E:\appservices\ntx-config\config\persistent\VDW
+15.05.2019 10:00:20 | matthias | INFORMATION... | Test E:\appservices\ntx-config\config\persistent\VDW\VDI002-DEV.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | Success: E:\appservices\ntx-config\config\persistent\VDW\VDI002-DEV.json:8:					Model: "Persistent",
+15.05.2019 10:00:20 | matthias | INFORMATION... | Starting Script E:\appservices\invoke-ctxdevice\Invoke-CTXDevice.ps1 -VMName VDW041VD79003 -PreFix VDW -Model persistent -Action ReInstall_Finished -DTAP DEV -Job E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json -User matthias -FileWatcher 
+15.05.2019 10:00:20 | matthias | INFORMATION... | Checking Prerequisites
+15.05.2019 10:00:20 | matthias | INFORMATION... | Logfile would be set to E:\appservices\invoke-ctxdevice\Files\processed\matthias\VWM00000228.log
+15.05.2019 10:00:20 | matthias | INFORMATION... | Cleaning Logfile () in E:\appservices\invoke-ctxdevice\Files\processed\matthias and keep the last 30 Logs
+15.05.2019 10:00:20 | matthias | INFORMATION... | Citrix Provisioning Server Powershell SnapIn already loaded
+15.05.2019 10:00:20 | matthias | INFORMATION... | Nutanix Powershell SnapIn already loaded
+15.05.2019 10:00:20 | matthias | INFORMATION... | Update E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json
+15.05.2019 10:00:20 | matthias | INFORMATION... | Action: ReInstall_Finished
+15.05.2019 10:00:20 | matthias | INFORMATION... | Remark: Backend process starting...
+15.05.2019 10:00:20 | matthias | INFORMATION... | User: matthias
+15.05.2019 10:00:21 | matthias | INFORMATION... | VM: VDW041VD79003
+15.05.2019 10:00:21 | matthias | INFORMATION... | ENV: DEV
+15.05.2019 10:00:21 | matthias | INFORMATION... | Date: 15.05.2019
+15.05.2019 10:00:21 | matthias | INFORMATION... | Time: 10:00:20
+15.05.2019 10:00:21 | matthias | INFORMATION... | Outfile: E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json
+15.05.2019 10:00:21 | matthias | INFORMATION... | Read Global Config from E:\appservices\ntx-config\config\Global\Global.json
+15.05.2019 10:00:21 | matthias | INFORMATION... | Read PreFix Config from E:\appservices\ntx-config\config\Global\VDW.json
+15.05.2019 10:00:21 | matthias | INFORMATION... | Check Config-Files in Folder E:\appservices\ntx-config\config\persistent\VDW
+15.05.2019 10:00:21 | matthias | INFORMATION... | Test E:\appservices\ntx-config\config\persistent\VDW\VDI002-DEV.json
+15.05.2019 10:00:21 | matthias | INFORMATION... | Success: E:\appservices\ntx-config\config\persistent\VDW\VDI002-DEV.json:8:					Model: "Persistent",
+15.05.2019 10:00:21 | matthias | INFORMATION... | Connect to Cluster NTXCluster01.euclab.com
+15.05.2019 10:00:21 | matthias | INFORMATION... | Location: 041
+15.05.2019 10:00:21 | matthias | INFORMATION... | DataCenter: 1
+15.05.2019 10:00:21 | matthias | INFORMATION... | DTAP Stage: DEV
+15.05.2019 10:00:21 | matthias | INFORMATION... | Searchstring: VDW041VD78
+15.05.2019 10:00:26 | matthias | INFORMATION... | List all Devices based on searchstring VDW041VD78
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD78003 - Host VSL041AHV1003 - Cluster: NTXCluster01.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD78002 - Host VSL041AHV1001 - Cluster: NTXCluster01.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD78001 - Host VSL041AHV1003 - Cluster: NTXCluster01.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | Connect to Cluster NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | Location: 041
+15.05.2019 10:00:26 | matthias | INFORMATION... | DataCenter: 2
+15.05.2019 10:00:26 | matthias | INFORMATION... | DTAP Stage: DEV
+15.05.2019 10:00:26 | matthias | INFORMATION... | Searchstring: VDW041VD79
+15.05.2019 10:00:26 | matthias | INFORMATION... | List all Devices based on searchstring VDW041VD79
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD79003 - Host VSL041AHV2004 - Cluster: NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | Update E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json
+15.05.2019 10:00:26 | matthias | INFORMATION... | Action: ReInstall_Finished
+15.05.2019 10:00:26 | matthias | INFORMATION... | Remark: VM runs on NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | User: matthias
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD79003
+15.05.2019 10:00:26 | matthias | INFORMATION... | ENV: DEV
+15.05.2019 10:00:26 | matthias | INFORMATION... | Date: 15.05.2019
+15.05.2019 10:00:26 | matthias | INFORMATION... | Time: 10:00:26
+15.05.2019 10:00:26 | matthias | INFORMATION... | Outfile: E:\appservices\invoke-ctxdevice\Files\processed\matthias\Job00000228.json
+15.05.2019 10:00:26 | matthias | INFORMATION... | Your entered VM VDW041VD79003 is detected on the cluster NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD79001 - Host VSL041AHV2001 - Cluster: NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | VM: VDW041VD79002 - Host VSL041AHV2001 - Cluster: NTX041CL2001.euclab.com
+15.05.2019 10:00:26 | matthias | INFORMATION... | Connect to Ivanti DSM
+15.05.2019 10:00:26 | matthias | INFORMATION... | User: dachser-ds\matthias
+15.05.2019 10:00:26 | matthias | INFORMATION... | PwdFile: E:\appservices\ntx-config\pwd\AES_PASSWORD_FILE_DSM.txt
+15.05.2019 10:00:26 | matthias | INFORMATION... | KeyFile: E:\appservices\ntx-config\pwd\AES_KEY_FILE_DSM.key
+15.05.2019 10:00:26 | matthias | INFORMATION... | DSMServer: dmw041bls01:8080
+15.05.2019 10:00:26 | matthias | INFORMATION... | URI: http://dmw041bls01:8080/blsAdministration/AdministrationService.asmx?WDSL
+15.05.2019 10:00:27 | matthias | INFORMATION... |  --- Logfile is updated ---
+15.05.2019 10:00:27 | matthias | INFORMATION... | current Logfile: E:\appservices\invoke-ctxdevice\Files\processed\matthias\VWM00000228.log 
