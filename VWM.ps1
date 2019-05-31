@@ -363,7 +363,11 @@ $wpf.dgUser.add_SelectedCellsChanged( {
             #Grab cell content, depends on the C0 name you have given this column above, will stop working if you cnage that
             $cellContent = $wpf.dgUser.SelectedCells.Item(0).item.C0
             #grab the matching json file path from files that matches the job ID, doing it this way so I son't have to go back to the file system again as this may be costly
-            $jsonPath = $Script:files -match $cellContent
+            if (($Script:files | Measure-Object).count -gt 1) {
+	      $jsonPath = $Script:files -match $cellContent
+	     } else {
+               $jsonPath = $Script:files
+	    }
             # Get path and filename from the json file we matched
             $JsonFileName = Split-Path $jsonPath -leaf
             $jsonPath = Split-Path $jsonPath -Parent
